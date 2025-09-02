@@ -1,0 +1,74 @@
+anonymous fn: fn without a firstName
+used in scenarios like callbacks, event handlers,IIFE
+SYNTAX: 
+let anonymousFunction = function(){
+consolde.log("anonymous function");
+};
+
+when a variable is assigned anonymous fn it is 
+called fn expression.
+
+Callback Functions
+Anonymous functions are commonly used as callback functions, especially in asynchronous operations like event handling, timers, or AJAX requests.
+
+setTimeout(function() {
+    console.log("This is a callback function!");
+}, 1000);
+
+
+Immediately Invoked Function Expressions (IIFE)
+An IIFE is a function that is executed immediately after it is defined. This is often used to create a new scope to avoid polluting the global scope.
+(function() {
+    console.log("IIFE executed immediately!");
+})();
+
+
+Event Handlers
+Anonymous functions are frequently used in event handling for adding interactivity to web pages.
+document.getElementById("myButton").addEventListener("click", function() {
+    alert("Button was clicked!");
+
+
+ARROW FUNCTION;
+Regular Function Expression:
+let calculateSum = function(x, y) {
+    return x + y;
+};
+console.log(calculateSum(12, 4)); // Output: 16
+
+Arrow Function
+let calculateSum = (x, y) => {
+    return x + y;
+};
+console.log(calculateSum(12, 4)); // Output: 16
+
+One of the most significant differences between arrow functions and regular functions is how they handle the this keyword. Arrow functions do not have their own this context; they inherit this from the surrounding non-arrow function or the global context.
+
+Example of Lexical this:let calculateSumOrDifference = (x, y) => {
+    if (x > y) {
+        return x + y;
+    } else {
+        return x - y;
+    }
+};
+
+console.log(calculateSumOrDifference(31, 12)); // Output: 43
+console.log(calculateSumOrDifference(11, 12)); // Output: -1
+
+Best uses; 
+event handling
+document.getElementById("myButton").addEventListener("click", () => {
+    console.log("Button clicked!");
+});
+
+array methods
+let numbers = [1, 2, 3, 4, 5];
+let squares = numbers.map(x => x * x);
+
+console.log(squares); // Output: [1, 4, 9, 16, 25]
+
+conditional and terninary operators
+let calculateSumOrDifference = (x, y) => x > y ? x + y : x - y;
+
+console.log(calculateSumOrDifference(31, 12)); // Output: 43
+console.log(calculateSumOrDifference(11, 12)); // Output: -1

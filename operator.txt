@@ -1,0 +1,38 @@
+/* Type Coercion in Comparison : type coercion means it can convert one datatype to another)
+        console.log("2" > 1);   // true
+    
+Strict Equality (===) vs. Loose Equality (==)
+        Loose Equality (==): Converts the values before comparing them.
+        Strict Equality (===): Checks both the value and the type.
+        console.log(null == undefined);  // true
+        console.log(null === undefined); // false
+        // 
+Null in Mathematical Comparisons
+    null has unique behavior when used in mathematical comparisons (such as <, >, <=, >=). In these comparisons, null is treated as 0.
+    but console.log(null == 0);  // false and console.log(null >= 0);  // true
+    null == 0 is false because null is not converted to 0 in equality checks (==).
+
+
+Always use === instead of == to avoid issues with type coercion.
+String comparisons are done based on ASCII (Unicode) values.
+JavaScript automatically converts strings to numbers in numerical comparisons.
+Null behaves differently in mathematical and equality comparisons.
+Undefined always results in false in numerical comparisons.
+
+
+
+JavaScript Nullish Coalescing: nullish coalescing is a new type of logical operator,This operator can help prevent pitfalls that might occur when working with values like undefined, null, 0, or an empty string.
+ompare nullish coalescing (??) with the OR (||) operator.
+
+OR (||) Operator:
+The OR operator returns the first truthy value in an expression. It will treat values like 0, "" (empty string), null, and undefined as falsy values.
+
+let firstName = "";
+console.log(firstName || "Hidden Geek");  // Output: "Hidden Geek"
+
+
+In this case,
+ OR considers the empty string as falsy, so it returns the fallback value "Hidden Geek".
+
+Nullish Coalescing (??) Operator:
+The nullish coalescing operator will only return the fallback value if the variable is null or undefined. It will not return the fallback value for falsy values like 0 or "".

@@ -1,0 +1,6 @@
+similar to arrays in other programming languages
+
+let studentNames=["seira","sneha","nisha","raju"];
+for (let index in studentNames){
+    console.log(studentNames[index]);
+}
