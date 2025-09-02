@@ -14,11 +14,10 @@ if (!isNaN(userAgeNumber)) {
     console.log(`You were born in the year ${birthYear}.`);
 } else {
     console.log('Please enter a valid number for age.');
+}
 
 
-
-
-}  /* Key Points
+  /* Key Points
 Type Conversion: Converting data from one type to another is essential for performing various operations.
 User Input: Using readline-sync to read user input from the terminal.
 Error Handling: Checking the validity of user input and handling errors appropriately. */
