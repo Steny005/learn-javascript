@@ -11,3 +11,4 @@ console.log(a - word); //NaN not a number
 
  
 
+const readlineSync = require('readline-sync');
