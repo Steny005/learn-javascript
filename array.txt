@@ -4,3 +4,4 @@ let studentNames=["seira","sneha","nisha","raju"];
 for (let index in studentNames){
     console.log(studentNames[index]);
 }
+

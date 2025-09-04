@@ -21,12 +21,12 @@ console.log(studentNames); //[ 'sneha', 'nisha', 'raju' ]
 let upperCaseNames = studentNames.map(name => name.toUpperCase());
 console.log(upperCaseNames); // [ 'SNEHA', 'NISHA', 'RAJU' ]
 
+//filter
 let longNames = studentNames.filter(name => name.length > 4);
 console.log(longNames); // Output: ["sneha", "nisha"]
 
 
 array = [ 1, 2, 3, 4, 5, 6 ];
- 
 const helperSum = (acc,curr) => acc+curr
 sum = array.reduce(helperSum, 0);
  
